@@ -1,0 +1,30 @@
+<h3 *ngFor="#bob of tasks">{{ bob.description }}</h3>
+
+<h3>Create To-Do List app</h3>
+<h3>Learn Kung fu</h3>
+<h3>C`reate To-Do List app</h3>
+<h3>Create To-Do List app</h3>
+
+<div *ngFor="#task of tasks">
+  <h3>task.description</h3>
+  <p>task.id</p>
+</div>
+
+// This is shorthand:
+export class Task {
+  public done: boolean = false;
+  constructor(public description: string, public id: number) {
+
+  }
+}
+
+// For this:
+export class Task {
+  public done: boolean = false;
+  public description: string;
+  public id: number;
+  constructor(userDescription, userId) {
+    this.description = userDescription;
+    this.id = userId;
+  }
+}
